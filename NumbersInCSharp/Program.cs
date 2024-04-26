@@ -14,6 +14,10 @@ double g = 8;
 double h = (e + f) / g;
 Console.WriteLine(h);
 
+double max = double.MaxValue;
+double min = double.MinValue;
+Console.WriteLine($"The range of double is {min} to {max}");
+
 void WorkWithIntegers()
 {
     int a = 18;
