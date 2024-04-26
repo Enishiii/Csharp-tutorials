@@ -1,7 +1,11 @@
 ﻿// WorkWithIntegers();
 // OrderPrecedence();
 // TestLimits();
-WorkWithDoubles();
+// WorkWithDoubles();
+
+decimal min = decimal.MinValue;
+decimal max = decimal.MaxValue;
+Console.WriteLine($"The range of the decimal type is {min} to {max}");
 
 void WorkWithIntegers()
 {
