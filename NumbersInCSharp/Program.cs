@@ -8,6 +8,12 @@ double c = 2;
 double d = (a + b) / c;
 Console.WriteLine(d);
 
+double e = 19;
+double f = 23;
+double g = 8;
+double h = (e + f) / g;
+Console.WriteLine(h);
+
 void WorkWithIntegers()
 {
     int a = 18;
