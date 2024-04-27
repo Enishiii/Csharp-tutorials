@@ -1,8 +1,8 @@
-﻿// WorkWithIntegers();
-// OrderPrecedence();
-// TestLimits();
-// WorkWithDoubles();
-// WorkWithDecimals();
+﻿WorkWithIntegers();
+OrderPrecedence();
+TestLimits();
+WorkWithDoubles();
+WorkWithDecimals();
 CalcTheAreaOfACircle();
 
 void WorkWithIntegers()
