@@ -1,36 +1,10 @@
-﻿// ExploreIf();
+﻿using System;
+
+ExploreIf();
+
 ExploreLoop();
 
-
-void ExploreLoop()
-{
-    int counter = 0;
-    while (counter < 10)
-    {
-        Console.WriteLine($"Hello World! The counter is {counter}");
-        counter++;
-    }
-
-    int secondCounter = 0;
-    do
-    {
-        Console.WriteLine($"Hello World! The counter is {secondCounter}");
-        secondCounter++;
-    } while (secondCounter < 10);
-
-    for (int index = 0; index < 10; index++)
-    {
-        Console.WriteLine($"Hello World! The index is {index}");
-    }
-
-    for (int row = 1; row < 11; row++)
-    {
-        for (char column = 'a'; column < 'k'; column++)
-        {
-            Console.WriteLine($"The cell is ({row}, {column})");
-        }
-    }
-}
+ChallengeAnswer();
 
 void ExploreIf()
 {
@@ -67,4 +41,47 @@ void ExploreIf()
         Console.WriteLine("The answer is not greater than 10");
         Console.WriteLine("And the first number is not equal to the second");
     }
+}
+
+void ExploreLoop()
+{
+    int counter = 0;
+    while (counter < 10)
+    {
+        Console.WriteLine($"Hello World! The counter is {counter}");
+        counter++;
+    }
+
+    int secondCounter = 0;
+    do
+    {
+        Console.WriteLine($"Hello World! The counter is {secondCounter}");
+        secondCounter++;
+    } while (secondCounter < 10);
+
+    for (int index = 0; index < 10; index++)
+    {
+        Console.WriteLine($"Hello World! The index is {index}");
+    }
+
+    for (int row = 1; row < 11; row++)
+    {
+        for (char column = 'a'; column < 'k'; column++)
+        {
+            Console.WriteLine($"The cell is ({row}, {column})");
+        }
+    }
+}
+
+void ChallengeAnswer()
+{
+    int sum = 0;
+    for (int number = 1; number <= 20; number++)
+    {
+        if (number % 3 == 0)
+        {
+            sum += number;
+        }
+    }
+    Console.WriteLine(sum);
 }
