@@ -7,12 +7,17 @@
 //     counter++;
 // }
 
-int counter = 0;
-do
+// int counter = 0;
+// do
+// {
+//     Console.WriteLine($"Hello World! The counter is {counter}");
+//     counter++;
+// } while (counter < 10);
+
+for (int index = 0; index < 10; index++)
 {
-    Console.WriteLine($"Hello World! The counter is {counter}");
-    counter++;
-} while (counter < 10);
+    Console.WriteLine($"Hello World! The index is {index}");
+}
 
 void ExploreIf()
 {
