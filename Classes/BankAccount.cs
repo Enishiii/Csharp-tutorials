@@ -68,4 +68,6 @@ public class BankAccount
 
         return report.ToString();
     }
+
+    public virtual void PerformMonthEndTransactions() {}
 }
