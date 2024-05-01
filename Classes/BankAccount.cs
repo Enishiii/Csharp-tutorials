@@ -2,7 +2,6 @@ namespace Classes;
 
 public class BankAccount
 {
-    private static int s_accountNumberSeed = 1234567890;
     public string Number { get; }
     public string Owner { get; set; }
     public decimal Balance 
@@ -19,14 +18,24 @@ public class BankAccount
         }
     }
 
-    public BankAccount(string name, decimal initialBalance)
+    private static int s_accountNumberSeed = 1234567890;
+    
+    // <ConstructorModifications>
+    private readonly decimal _minimumBalance;
+
+    public BankAccount(string name, decimal initialBalance) : this(name, initialBalance, 0) { }
+
+    public BankAccount(string name, decimal initialBalance, decimal minimumBalance)
     {
         Number = s_accountNumberSeed.ToString();
         s_accountNumberSeed++;
-        
+
         Owner = name;
-        MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
+        _minimumBalance = minimumBalance;
+        if (initialBalance > 0)
+            MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
     }
+    // </constructorModifications>
 
     private List<Transaction> _allTransactions = new List<Transaction>();
 
@@ -46,7 +55,7 @@ public class BankAccount
         {
             throw new ArgumentOutOfRangeException(nameof(amount), "Amount of withdrawal must be positive");
         }
-        if (Balance - amount < 0)
+        if (Balance - amount < _minimumBalance)
         {
             throw new InvalidOperationException("Not sufficient funds for this withdrawal");
         }
